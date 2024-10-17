@@ -16,7 +16,7 @@ return new class extends Migration
             $table-> date ("tanggal");
             $table-> integer ("id_user");
             $table -> text ("alamat");
-            $table->enum ("status");
+            $table->enum ("status",['diproses','dikirim','selesai']);
             $table->timestamps();
         });
     }
