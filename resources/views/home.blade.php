@@ -846,6 +846,7 @@
         <!-- Navbar Bawah (Mobile) -->
 
         <section id="navbar-bottom">
+           
             <label title="home" for="home" class="label">
                 <input id="home" name="page" type="radio" checked="" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" height="20" width="21" class="icon home"
