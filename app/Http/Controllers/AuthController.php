@@ -19,8 +19,15 @@ class AuthController extends Controller
         
     }
 
+    function authh(){
+        return view('/auth');
+        
+    }
+
    function proseslogin(Request $request) {
+
     $email = $request->input("username");
+ 
     $password = $request->input("password");
     
     $akun = ['email' => $email, 'password' => $password];
@@ -34,21 +41,24 @@ class AuthController extends Controller
             return redirect('/home'); // Arahkan ke halaman user jika bukan admin
         }
     } else {
-        return redirect('/login')->withErrors(['message' => 'Login gagal. Periksa kembali email dan password.']);
+        return redirect('/auth')->withErrors(['message' => 'Login gagal. Periksa kembali email dan password.']);
     }
 }
 
 
     
 public function prosesregister(Request $request) {
+    $name = $request->input("name");
     $email = $request->input("email"); // Perbaiki di sini
     $password = $request->input("password");
 
     // Membuat user baru dengan password yang di-hash
     $user = User::create([
-        'name' => 'Nama Pengguna', // Isi dengan nama default atau ambil dari input form
+        'name' => $name, // Isi dengan nama default atau ambil dari input form
         'email' => $email,
-        'password' => Hash::make($password)
+        'password' => Hash::make($password),
+        'role' => 'user', // Isi dengan role default atau ambil dari input form
+
     ]);
 
     // Mengotentikasi user yang baru dibuat
@@ -58,6 +68,7 @@ public function prosesregister(Request $request) {
         return redirect('/login')->withErrors(['message' => 'Login failed.']);
     }
 }
+
 
 
 }
