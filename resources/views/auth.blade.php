@@ -591,11 +591,8 @@ html,body {
             <input type="text" placeholder="name" name="name"/>
 			<input type="email" placeholder="Email" name="email"/>
 			<input type="password" placeholder="Password"  name="password" />
-               <select name="role">
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-        </select><br>
-			<button  value="Daftar" >Sign Up</button>
+             <br>
+			<button  value="Daftar"  type='submit'>Sign Up</button>
 		</form>
 	</div>
 	<div class="form-container sign-in-container">
@@ -607,7 +604,7 @@ html,body {
 			<input type="email" placeholder="Email" name = "username"/>
 			<input type="password" placeholder="Password" name = "password"/>
           
-			<button>Sign In</button>
+			<button type='submit'>Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
  use App\Http\Controllers\AdminController;
  use App\Http\Controllers\PostController;
  use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -28,9 +29,19 @@ Route::get('/location', function(){
 Route::get('/admin', function(){
     return view('admin');
 });
+Route::get('/account', function(){
+    return view('account');
+});
+
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::get('/admin/users', [UserController::class, 'tampil'])->name('users.tampil');
+
+
 
 Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/product', [ProductController::class, "index"]);
-    Route::post('/admin/product', [ProductController::class, "store"]);
+    Route::get('/admin/product', [ProductController::class, "index"]); //buat nampilin
+    Route::post('/admin/product', [ProductController::class, "store"]); //buat ngepost
 });

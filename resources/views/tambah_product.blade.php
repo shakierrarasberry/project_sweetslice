@@ -19,5 +19,25 @@
 
         <input type="submit" value="Simpan">
     </form>
-</body>
-</html>
+
+    <div>
+    <h1>Daftar Menu</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Deskripsi</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($products as $product)
+                <tr>
+                    <td>{{ $product->nama_product }}</td>
+                    <td>{{ $product->harga }}</td>
+                    <td>{{ $product->deskripsi }}</td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>

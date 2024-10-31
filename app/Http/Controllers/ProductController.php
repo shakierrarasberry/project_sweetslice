@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Product;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    
     public function index()
     {
         return view("tambah_product");
@@ -41,6 +42,13 @@ class ProductController extends Controller
             "id_kategori" => "1",
         ]);
     }
+
+             public function tampilkanData()
+    {
+        $products = Product::all(); // Mengambil semua data produk
+    return view('tambah_product', ['products' => $products]);
+    }
+
 
     /**
      * Display the specified resource.
