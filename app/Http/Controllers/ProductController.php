@@ -45,8 +45,8 @@ class ProductController extends Controller
 
              public function tampilkanData()
     {
-        $products = Product::all(); // Mengambil semua data produk
-    return view('tambah_product', ['products' => $products]);
+        $ngambilproduct = Product::all(); // Mengambil semua data produk
+    return view('tambah_product', ['products' => $ngambilproduct]);
     }
 
 

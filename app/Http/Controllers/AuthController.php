@@ -10,14 +10,7 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    function register(){
-        return view('/register');
-
-    }
-    function login(){
-        return view('/login');
-        
-    }
+    
 
     function authh(){
         return view('/auth');
@@ -36,7 +29,7 @@ class AuthController extends Controller
         // Cek role setelah login
         $user = Auth::user();
         if ($user->role === 'admin') {
-            return redirect('/admin'); // Arahkan ke halaman admin jika admin
+            return redirect('/home'); // Arahkan ke halaman admin jika admin
         } else {
             return redirect('/home'); // Arahkan ke halaman user jika bukan admin
         }

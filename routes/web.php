@@ -32,6 +32,9 @@ Route::get('/admin', function(){
 Route::get('/account', function(){
     return view('account');
 });
+Route::get('/aboutus', function(){
+    return view('aboutus');
+});
 
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -42,6 +45,6 @@ Route::get('/admin/users', [UserController::class, 'tampil'])->name('users.tampi
 
 Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
-    Route::get('/admin/product', [ProductController::class, "index"]); //buat nampilin
+    Route::get('/admin/product', [ProductController::class, "tampilkanData"]); //buat nampilin
     Route::post('/admin/product', [ProductController::class, "store"]); //buat ngepost
 });

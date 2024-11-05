@@ -19,7 +19,7 @@
 
         <input type="submit" value="Simpan">
     </form>
-
+  
     <div>
     <h1>Daftar Menu</h1>
     <table>

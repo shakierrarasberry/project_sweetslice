@@ -97,9 +97,10 @@
     </style>
 </head>
 <body>
+     @if (Auth::check())
     <nav>
      <div class="button">
-        <a href="p/ruanghitung.html" style="          text-decoration: none;"><i class="bi bi-arrow-left"></i> kembali</a>
+        <a href="/home" style=text-decoration: none;"><i class="bi bi-arrow-left"></i> kembali</a>
       </div>
   </nav>
   <br/>
@@ -125,5 +126,11 @@
     </div>
     </center>
 </body>
-
+@else
+    <h1>kmu belum login,ayok login duluu
+        <p>ke halaman login
+            <a href="/auth">klik di sini untuk ke halaman login</a>
+        </p>
+    </h1>
+@endif
 </html>

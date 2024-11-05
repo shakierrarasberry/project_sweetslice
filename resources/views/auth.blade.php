@@ -643,10 +643,7 @@ html,body {
 			<span>or use your email for registration</span>
 			<input type="email" placeholder="Email" name="email"/>
 			<input type="password" placeholder="Password"  name="password" />
-             <select name="role">
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-        </select>
+          
             <button class="submit-btn" value="Daftar">Sign up</button>
 		</form>
 		</div>
@@ -662,7 +659,7 @@ html,body {
            @method("post")
 			<input type="email" placeholder="Email" name = "username"/>
 			<input type="password" placeholder="Password" name = "password"/>
-            <button class="submit-btn">Log in</button>
+            <button class="submit-btn">Log in</button> 
 		</form>
 			</div>
 			
