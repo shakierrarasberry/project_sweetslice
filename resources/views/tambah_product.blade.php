@@ -28,6 +28,7 @@
                 <th>Nama</th>
                 <th>Harga</th>
                 <th>Deskripsi</th>
+                <th>aksi</th>
             </tr>
         </thead>
         <tbody>
@@ -36,6 +37,15 @@
                     <td>{{ $product->nama_product }}</td>
                     <td>{{ $product->harga }}</td>
                     <td>{{ $product->deskripsi }}</td>
+                    <td>
+                      <form action="{{ route('posts.destroy', $post->id) }}" method="DELETE">
+    @csrf
+    @method('DELETE')
+    <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus post ini?')">Delete</button>
+</form>
+
+                        
+                    </td>
                 </tr>
             @endforeach
         </tbody>

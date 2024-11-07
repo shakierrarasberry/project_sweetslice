@@ -877,7 +877,7 @@
         <div class="container " style="margin-top: 20px;">
             <div class="row " style=" display: flex">
                 <div class="col ">
-                    <h1 style="font-weight: bold; color:#666;">
+                    <h1 style="font-weight: bold; color:red;">
                         Enjoy Delicious Bento Cake
                     </h1>
                     <p style="color:#666;">

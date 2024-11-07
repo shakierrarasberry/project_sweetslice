@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
+       use App\Models\Post;
 
 
 class ProductController extends Controller
@@ -49,14 +50,24 @@ class ProductController extends Controller
     return view('tambah_product', ['products' => $ngambilproduct]);
     }
 
+ 
+
+
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        //
-    }
+  
+
+public function show($id)
+{
+    // Mencari data berdasarkan id
+    $post = Post::findOrFail($id);
+
+    // Mengirim $post ke view
+    return view('tambah_product', compact('post'));
+}
+
 
     /**
      * Show the form for editing the specified resource.
@@ -77,8 +88,15 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
-    }
+  
+public function destroy($id)
+{
+    // Mencari data berdasarkan id
+    $post = Post::findOrFail($id); // Mencari data berdasarkan ID dan menyimpannya di variabel $post
+
+    $post->delete(); // Menghapus data tersebut
+
+    return redirect()->route('posts.index')->with('success', 'Post berhasil dihapus');
+}
+
 }
