@@ -38,13 +38,12 @@
                     <td>{{ $product->harga }}</td>
                     <td>{{ $product->deskripsi }}</td>
                     <td>
-                      <form action="{{ route('posts.destroy', $post->id) }}" method="DELETE">
+                        <form action="{{ route('products.destroy', $product->id) }}" method="POST">
     @csrf
     @method('DELETE')
-    <button type="submit" onclick="return confirm('Apakah Anda yakin ingin menghapus post ini?')">Delete</button>
+    <button type="submit" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</button>
 </form>
-
-                        
+            
                     </td>
                 </tr>
             @endforeach

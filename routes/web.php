@@ -47,4 +47,6 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin', [AdminController::class, 'index']);
     Route::get('/admin/product', [ProductController::class, "tampilkanData"]); //buat nampilin
     Route::post('/admin/product', [ProductController::class, "store"]); //buat ngepost
+    Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+
 });

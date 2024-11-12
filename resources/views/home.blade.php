@@ -1102,10 +1102,10 @@
             <div class="footer-section information">
                 <h3>Information</h3>
                 <ul>
-                    <li><a href="#" style="text-decoration:none;">home</a></li>
-                    <li><a href="#" style="text-decoration:none;">about us</a></li>
+                    <li><a href="/home" style="text-decoration:none;">home</a></li>
+                    <li><a href="/aboutus" style="text-decoration:none;">about us</a></li>
                     <li><a href="#" style="text-decoration:none;">categories</a></a></li>
-                    <li><a href="#" style="text-decoration:none;">location</a></li>
+                    <li><a href="/location" style="text-decoration:none;">location</a></li>
                 </ul>
             </div>
             <div class="footer-section address">

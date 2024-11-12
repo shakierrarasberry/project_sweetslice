@@ -62,10 +62,10 @@ class ProductController extends Controller
 public function show($id)
 {
     // Mencari data berdasarkan id
-    $post = Post::findOrFail($id);
+    // $post = Post::findOrFail($id);
 
-    // Mengirim $post ke view
-    return view('posts.show', compact('post'));
+    // // Mengirim $post ke view
+    // return view('posts.show', compact('post'));
 }
 
 
@@ -91,12 +91,17 @@ public function show($id)
   
 public function destroy($id)
 {
-    // Mencari data berdasarkan id
-    $post = Post::findOrFail($id); // Mencari data berdasarkan ID dan menyimpannya di variabel $post
+    // Cari data berdasarkan ID
+    $product = Product::find($id);
 
-    $post->delete(); // Menghapus data tersebut
-
-    return redirect()->route('posts.index')->with('success', 'Post berhasil dihapus');
+    // Cek apakah data ditemukan
+    if ($product) { 
+        $product->delete(); // Hapus data
+        return redirect()->back();
+    } else {
+        return redirect()->back();
+    }
 }
+
 
 }
