@@ -28,7 +28,7 @@
             overflow-x: hidden;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f3ebea;
+            background-color:#f3ebea;
             font-family: 'Poppins';
         }
 
@@ -85,7 +85,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            background-color: #d0c5bd;
+            background-color: #b6aaae;
             /* Warna latar dari style kedua */
             justify-content: space-evenly;
             padding: 10px;
@@ -137,39 +137,28 @@
 
         .label>svg {
             transition: all 200ms;
-            fill: #a69890;
+            fill: #504646;
             width: 20px;
         }
 
         .label>svg:hover path {
-            fill: #504646;
+            fill: #FFFFFF;
             /* Warna berubah saat di-hover */
         }
 
         #maps {
             transition: all 200ms;
-            color: #a69890;
+            color: #504646;
             width: 20px;
             font-size: 20px;
             margin-right: 35px;
         }
 
         #maps:hover {
-            color: #504646;
+            color: #FFFFFF;
             /* Warna berubah saat di-hover */
         }
 
-        #keranjang {
-            transition: all 200ms;
-            color: #a69890;
-            font-size: 20px;
-            margin-right: 20px;
-        }
-
-        #keranjang:hover {
-            color: #504646;
-            /* Warna berubah saat di-hover */
-        }
 
 
 
@@ -299,22 +288,28 @@
         }
 
         .cardd {
-            gap: 30px;
-            justify-content: center;
+            display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 0 10px;
+    box-sizing: border-box;
 
         }
 
         .card {
             margin-top: 70px;
             margin-left: 20px;
+            
             width: 190px;
             height: 254px;
             overflow: visible;
             cursor: pointer;
             position: relative;
-            margin-right: 30px;
+            
 
         }
+        
 
         .card::before,
         .content {
@@ -478,7 +473,7 @@
             box-sizing: content-box;
             display: flex;
             align-items: center;
-            background-color: #f3ebea;
+            background-color: #FFFFFF;
         }
 
         .loader {
@@ -510,6 +505,20 @@
             }
         }
 
+/* Ukuran gambar di perangkat kecil */
+.imgsaran {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Ukuran gambar di perangkat besar (desktop) */
+@media (min-width: 768px){
+    .imgsaran{
+        width: 700px;
+        height: 700px;
+    }
+}
 
         .icon {
             width: 30px;
@@ -524,7 +533,7 @@
             border: none;
             outline: none;
             padding-left: 15px;
-            background-color: #f3ebea;
+            background-color: #FFFFFF;
             color: #504646;
             font-size: 1em;
         }
@@ -539,7 +548,7 @@
             width: 95px;
             border: none;
             border-radius: 15px;
-            color: #f3ebea;
+            color: #FFFFFF;
             cursor: pointer;
             background-color: #b6aaae;
             font-weight: 500;
@@ -729,7 +738,7 @@
         }
 
         .logo-section h2 {
-            font-size: 24px;
+            font-size: 18px;
             color: #fc8403;
             font-weight: bold;
             margin-bottom: 10px;
@@ -740,7 +749,7 @@
         }
 
         .footer-section h3 {
-            font-size: 18px;
+            font-size: 19px;
             margin-bottom: 20px;
             color: #333;
         }
@@ -748,7 +757,7 @@
         .footer-section p,
         .footer-section a {
             color: #666;
-            font-size: 14px;
+            font-size: 13px;
             line-height: 1.6;
         }
 
@@ -781,7 +790,7 @@
             margin-left: 20px;
             margin-right: 10px;
             color: #a69890;
-            font-size: 20px;
+            font-size: 18px;
         }
 
         .social-icons a:hover {
@@ -817,8 +826,9 @@
                 <div class="nav-links"><b><a href="/aboutus">about us</a></b></div>
             </div>
 
+            <label title="cart" for="cart" class="label">
+  
 
-    
             <label title="profile" for="profile" class="label">
                 <input id="profile" name="page" type="radio" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
@@ -835,7 +845,7 @@
 
         <div class="navkhususmobile">
             <img style="margin-top:-20px;" class="imgmobile" src="logo_copy.png" alt="">
-         
+
         </div>
 
         <!-- Navbar Bawah (Mobile) -->
@@ -846,67 +856,63 @@
                 <input id="home" name="page" type="radio" checked="" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" height="20" width="21" class="icon home"
                     id="label">
-                    <a href="/home">
-                         <path fill="inherit"
+                    <path fill="inherit"
                         d="M18.9999 6.01002L12.4499 0.770018C11.1699 -0.249982 9.16988 -0.259982 7.89988 0.760018L1.34988 6.01002C0.409885 6.76002 -0.160115 8.26002 0.0398848 9.44002L1.29988 16.98C1.58988 18.67 3.15988 20 4.86988 20H15.4699C17.1599 20 18.7599 18.64 19.0499 16.97L20.3099 9.43002C20.4899 8.26002 19.9199 6.76002 18.9999 6.01002ZM10.9199 16C10.9199 16.41 10.5799 16.75 10.1699 16.75C9.75988 16.75 9.41988 16.41 9.41988 16V13C9.41988 12.59 9.75988 12.25 10.1699 12.25C10.5799 12.25 10.9199 12.59 10.9199 13V16Z">
                     </path>
-                    </a>
-                   
                 </svg>
             </label>
             <label title="cart" for="cart" class="label">
                 <input id="cart" name="page" type="radio" />
                 <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18">
-                    <a href="/location">
-                        <i fill="inherit" class="bi bi-geo-alt-fill" id="maps"></i>
-                    </a>
+                    <i fill="inherit" class="bi bi-geo-alt-fill" id="maps"></i>
                 </svg>
             </label>
             <label title="profile" for="profile" class="label">
-    <input id="profile" name="page" type="radio" />
-    <a href="/account">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile" id="label">
-            <path fill="inherit" d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z"></path>
-        </svg>
-    </a>
-</label>
+                <input id="profile" name="page" type="radio" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
+                    id="label">
+                    <path fill="inherit"
+                        d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
+                    </path>
+                </svg>
+            </label>
         </section>
     </div>
     <!--  -->
     <div class="">
         <div class="container " style="margin-top: 20px;">
-            <div class="row " style=" display: flex">
+            <div class="row " style=" display: flex; column-gap:70px">
                 <div class="col ">
-                    <h1 style="font-weight: bold; color:red;">
+                    <h1 style="font-weight: bold; color:#a69890;">
                         Enjoy Delicious Bento Cake
                     </h1>
-                    <p style="color:#666;">
+                    <p style="color:#b6aaae;">
                         Small and Elegant, Bringing Joy.
                     </p>
-                    <button type="button" class="btn btn-dark"
-                        style="border-radius:20px;  height:20px; background-color:#504646; margin-bottom: 40px;">
+                    <button type="button" class="btn "
+                        style="border-radius:20px;  height:20px; background-color:#a69890; margin-bottom: 40px; ">
                         <p style="margin-top:-8px; color:#f3ebea">order now<i class="bi bi-arrow-right-short"></i></p>
                     </button>
                 </div>
-                <div class="col ">
-                    <img src="cakee.png" class="responsive-img">
+                <div class="col " style="margin-top:40px">
+                    <img src="foto3.png" class="responsive-img">
                 </div>
             </div>
         </div>
     </div>
     <!-- about us-->
-    <div class="manfaat" style="color:#666;">
+    <div class="manfaat" style="color:#b6aaae;">
         <div class="container ">
             <div class="row">
                 <div class="col">
-                    <img src="cakee.png" class="responsive-img2" style="margin-top: 50px;">
+                    <img src="foto1.png" class="responsive-img2" style="margin-top: 50px;">
                 </div>
                 <div class="col">
                     <h6>about us</h6>
-                    <h1 style="font-weight: bold;">
+                    <h1 style="font-weight: bold; color:#a69890">
                         We provide aesthetic and delicious bento cakes
                     </h1>
-                    <p>
+                    <p style="color:#b6aaae;">
                         In every slice, there is a story written. These cakes are not just about taste, but about
                         culture and memories engraved in beautiful moments, like the complementary relationship between
                         art and flavor.
@@ -917,8 +923,8 @@
         </div>
         <!-- menu favorit -->
         <div class=" textpopuler">
-            <h1 style="margin-left: 10px; font-weight: bold">menu populer</h1>
-            <p>see all</p>
+            <h1 style="margin-left: 10px; font-weight: bold; color:#a69890;">menu populer</h1>
+            <p style="color:#b6aaae;"> see all</p>
         </div>
         <div>
             <div style="display: flex; margin-bottom:100px; margin-top: 30px;" class="cardd">
@@ -947,7 +953,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="bento.png" alt="" class="imgcake" id="imgdiy">
+                                <img src="bento.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">bento cake</strong>
@@ -966,7 +972,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="bento.png" alt="" class="imgcake" id="imgdiy">
+                                <img src="uglycake.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">ugly cake</strong>
@@ -985,7 +991,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="bento.png" alt="" class="imgcake" id="imgdiy">
+                                <img src="valentine.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">valentine edition</strong>
@@ -1008,10 +1014,10 @@
             <div class="container ">
                 <div class="row">
                     <div class="col">
-                        <h1 style="font-weight: bold;">
+                        <h1 style="font-weight: bold; color:#a69890">
                             Masih Binggung Lokasi Toko Kita Dimana??
                         </h1>
-                        <p>
+                        <p style="color:#b6aaae;">
                             klik maps di samping untuk mengetahui lokasi toko kami
                         </p>
 
@@ -1025,10 +1031,10 @@
 
         <div class="saran">
 
-            <div class="box" style="color: #f3ebea">
+            <div class="box" style="background-color:#b6aaae; color:#FFFFFF">
                 <div>
                     <div class="container">
-                        <img src="cake.jpeg" alt="" style="width: 100px; height: 100px;">
+                        <img  class="img-fluid imgsaran"  src="ide.png" alt=""  style="width: 100px; height: 100px;">
                         <div class="textsaran" style="margin-left:20px;">
                             <h6 style="margin-top:5px">
                                 punya saran buat toko kami?
@@ -1113,8 +1119,9 @@
                 <a href=""><i class="bi bi-facebook"></i></a>
                 <a href="#"><i class="bi bi-instagram"></i></a>
             </div>
-            <p>Copyright &copy; 2024 SweetSlice. All rights reserved.</p>
-            <div class="payment-methods">
+            <p style="font-size: 14px;">Copyright &copy; 2024 SweetSlice. All rights reserved.</p>
+
+            <div class="payment-methods" style="font-size: 14px; margin-left:5px;">
                 <p>cash on delivery</p>
             </div>
         </div>
