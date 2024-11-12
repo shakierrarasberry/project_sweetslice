@@ -65,7 +65,7 @@ public function show($id)
     $post = Post::findOrFail($id);
 
     // Mengirim $post ke view
-    return view('tambah_product', compact('post'));
+    return view('posts.show', compact('post'));
 }
 
 
