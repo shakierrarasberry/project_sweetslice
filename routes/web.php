@@ -12,14 +12,13 @@ use App\Http\Controllers\UserController;
 
 
 // Rute yang mengarahkan ke metode index() di HomeController
-Route::get('/register', [AuthController::class, 'register']);
-Route::get('/login', [AuthController::class, 'login']);
+
 Route::get('/auth', [AuthController::class, 'authh']);
-
-
 Route::post('/prosesregister', [AuthController::class, 'prosesregister']);
-
 Route::post('/proseslogin', [AuthController::class, 'proseslogin']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
 Route::get('/home', function(){
     return view('home');
 });
@@ -36,8 +35,6 @@ Route::get('/aboutus', function(){
     return view('aboutus');
 });
 
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
-
 
 Route::get('/admin/users', [UserController::class, 'tampil'])->name('users.tampil');
 
@@ -48,5 +45,7 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/product', [ProductController::class, "tampilkanData"]); //buat nampilin
     Route::post('/admin/product', [ProductController::class, "store"]); //buat ngepost
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
+    Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
+Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
 
 });

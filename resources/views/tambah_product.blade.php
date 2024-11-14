@@ -43,7 +43,7 @@
     @method('DELETE')
     <button type="submit" onclick="return confirm('Yakin ingin menghapus data ini?')">Hapus</button>
 </form>
-            
+                    <button type="submit">Update</button>
                     </td>
                 </tr>
             @endforeach

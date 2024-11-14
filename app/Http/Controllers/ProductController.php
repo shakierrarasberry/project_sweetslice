@@ -51,6 +51,20 @@ class ProductController extends Controller
     }
 
  
+            public function update(Request $request, $id)
+            {
+                $product = Product::find($id);
+                $product->name = $request->input('name');
+                $product->price = $request->input('price');
+                $product->save();
+
+                return redirect()->route('/admin/product')->with('success', 'Produk berhasil diperbarui');
+            }
+                public function edit($id)
+{
+    $product = Product::find($id);
+    return view('product.edit', compact('product'));
+}
 
 
 
@@ -80,10 +94,8 @@ public function show($id)
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+   
+   
 
     /**
      * Remove the specified resource from storage.
