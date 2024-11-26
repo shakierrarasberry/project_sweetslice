@@ -45,7 +45,9 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/admin/product', [ProductController::class, "tampilkanData"]); //buat nampilin
     Route::post('/admin/product', [ProductController::class, "store"]); //buat ngepost
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('products.destroy');
-    Route::get('/product/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
-Route::put('/product/{id}', [ProductController::class, 'update'])->name('product.update');
+   
+    Route::get('/products/edit/{id}', [ProductController::class, 'edit']);
+Route::post('/products/update/{id}', [ProductController::class, 'update']);
+
 
 });

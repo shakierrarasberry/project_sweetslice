@@ -12,7 +12,9 @@
     <title>Locations</title>
     <style>
         body {
-          font-family: 'Poppins';
+            background-color:#f3ebea;
+            font-family: 'Poppins';
+        
 
             min-height: 100vh;
             margin: 0;
@@ -100,7 +102,7 @@
      @if (Auth::check())
     <nav>
      <div class="button">
-        <a href="/home" style=text-decoration: none;"><i class="bi bi-arrow-left"></i> kembali</a>
+        <a href="/home" style="text-decoration: none; font-weight: bold; color:#a69890;"><i class="bi bi-arrow-left" style="text-decoration : none;"></i> kembali</a>
       </div>
   </nav>
   <br/>
@@ -116,12 +118,12 @@
 
         <!-- Contact Info -->
         <div class="contact-info">
-            <h2>Location</h2>
-            <p> 🍰 Hai sahabat Sweeties <br>
+            <h2 style = "font-weight: bold; color:#a69890;">Location</h2>
+            <p style="color:#a69890;"> 🍰 Hai sahabat Sweeties <br>
             Jangan khawatir jika Anda ingin berkunjung ke toko kami! Kami telah menyediakan peta yang jelas di atas untuk memudahkan perjalanan Anda. Dengan petunjuk yang mudah diikuti, Anda bisa sampai ke lokasi kami tanpa kesulitan. Ayo, datanglah dan temukan produk terbaik kami!</p>
-            <a href="tel:+1234567890">📞 0858 sisanya kapan kapan</a>
-            <a href="mailto:hello@modular.io">✉️ sweetslice@gmail.com</a>
-            <a href="https://maps.app.goo.gl/8A6v23caNbEbXFQx8">📍 11 opal timur v - jawa barat indonesia 41373</a>
+            <a style="font-weight: bold; color:#a69890;" href="tel:+1234567890">📞 0858 sisanya kapan kapan</a>
+            <a style="font-weight: bold; color:#a69890;" href="mailto:hello@modular.io">✉️ sweetslice@gmail.com</a>
+            <a style="font-weight: bold; color:#a69890;" href="https://maps.app.goo.gl/8A6v23caNbEbXFQx8">📍 11 opal timur v - jawa barat indonesia 41373</a>
         </div>
     </div>
     </center>

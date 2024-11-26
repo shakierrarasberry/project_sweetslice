@@ -16,6 +16,13 @@
   <title>Document</title>
 </head>
 <style>
+             body {
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color:#f3ebea;
+            font-family: 'Poppins';
+        }
           ::selection {
             background-color: #504646;
             color: #ddd;
@@ -143,17 +150,6 @@
             /* Warna berubah saat di-hover */
         }
 
-        #keranjang {
-            transition: all 200ms;
-            color: #a69890;
-            font-size: 20px;
-            margin-right: 20px;
-        }
-
-        #keranjang:hover {
-            color: #504646;
-            /* Warna berubah saat di-hover */
-        }
 
 
 
@@ -261,6 +257,91 @@
             border-radius: 8px;
             height: 300px;
         }
+        
+        /* contact */
+        .form{
+          
+        }
+.form__group {
+  margin-top: 20px;
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #504646;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+textarea.form__field {
+  height: 100px;
+  resize: none;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form_field:placeholder-shown ~ .form_label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #504646, #a69890);
+  border-image-slice: 1;
+}
+
+.form_field:focus ~ .form_label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #a69890;
+  font-weight: 700;
+}
+
+/* reset input */
+.form_field:required, .form_field:invalid {
+  box-shadow: none;
+}
+
+    .btn {
+            background-color: #f3ebea;
+            border-color: #f3ebea;
+            color: #333;
+        }
+        
+    .btn:hover{
+      background-color:  #a69890;
+      border-color: #a69890;
+      color: #f3ebea;
+    }   
 
         .contact-info {
             flex: 1;
@@ -313,8 +394,10 @@
         
                 .footer {
             background-color: #f3ebea;
+            
             padding: 40px 0;
             color: #333;
+            
         }
 
         .container {
@@ -322,6 +405,7 @@
             justify-content: space-between;
             align-items: flex-start;
             max-width: 1200px;
+            
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -330,12 +414,7 @@
             width: 22%;
         }
 
-        .logo-section h2 {
-            font-size: 24px;
-            color: #fc8403;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+      
 
         .logo-section span {
             color: #333;
@@ -419,7 +498,7 @@
 
         <div class="navkhususmobile">
             <img style="margin-top:-20px;" class="imgmobile" src="logo.png" alt="">
-            <i style="margin-right:-10px;" class="bi bi-bag-fill" id="keranjang"></i>
+
         </div>
 
         <!-- Navbar Bawah (Mobile) -->
@@ -452,33 +531,111 @@
         </section>
     </div> 
     
-    
-        <div class="contact-section">
-        <!-- Map -->
-        <iframe class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.2673843540595!2d107.46687296950851!3d-6.385027066813991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69726e02556809%3A0x9306772fbad89c65!2sJl.%20Opal%20Timur%205%2C%20Cikampek%20Utara%2C%20Kec.%20Kota%20Baru%2C%20Karawang%2C%20Jawa%20Barat%2041374!5e0!3m2!1sid!2sid!4v1728971260672!5m2!1sid!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-            <h2>Location</h2>
-            <p> 🍰 Hai sahabat Sweeties <br>
-            Jangan khawatir jika Anda ingin berkunjung ke toko kami! Kami telah menyediakan peta yang jelas di atas untuk memudahkan perjalanan Anda. Dengan petunjuk yang mudah diikuti, Anda bisa sampai ke lokasi kami tanpa kesulitan. Ayo, datanglah dan temukan produk terbaik kami!</p>
-            <a href="tel:+1234567890">📞 0858 sisanya kapan kapan</a>
-            <a href="mailto:hello@modular.io">✉️ sweetslice@gmail.com</a>
-            <a href="https://maps.app.goo.gl/8A6v23caNbEbXFQx8">📍 11 opal timur v - jawa barat indonesia 41373</a>
-        </div>
+    <div style="width:100%; height:200px; background-color:red;">
+      
     </div>
     
     
     
+    
+          <div class="container mt-4">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-6 col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                      <i class="bi bi-telephone"></i>
+                        <h5 class="card-title">phone</h5>
+                        <p class="card-text">+62 895-0374-3099</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col-6 col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                      <i class="bi bi-whatsapp"></i>
+                        <h5 class="card-title">whatsapp</h5>
+                        <p class="card-text">+62 895-0374-3099</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col-6 col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                      <i class="bi bi-envelope"></i>
+                        <h5 class="card-title">e-mail</h5>
+                        <p class="card-text">_sweetslice@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col-6 col-lg-3 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                      <i class="bi bi-shop-window"></i>
+                        <h5 class="card-title">online store</h5>
+                        <p class="card-text">www.sweetslice.co.id</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+
+    
+    <div class="container my-5">
+    <div class="row">
+
+        <!-- Map Section -->
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <h1>kalian masi bingung lokasi kita dmn?</h1>
+      <p>klik maps di bawah ini untuk info lebih lengkap</p>
+            <iframe class="map w-100"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.2673843540595!2d107.46687296950851!3d-6.385027066813991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69726e02556809%3A0x9306772fbad89c65!2sJl.%20Opal%20Timur%205%2C%20Cikampek%20Utara%2C%20Kec.%20Kota%20Baru%2C%20Karawang%2C%20Jawa%20Barat%2041374!5e0!3m2!1sid!2sid!4v1728971260672!5m2!1sid!2sid"
+                height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <!-- Form Section -->
+        <div class="col-12 col-lg-6">
+  <div class="form">
+   <h1 style="font-weight: bold; color:#a69890">
+     Get in toch
+   </h1>
+   <p style="font-weight: bold; color:#a69890">
+     ghfyhgfg hbfyh
+     hhty
+   </p>
+<div class="form__group field">
+    <input type="input" class="form__field" placeholder="Name" required="">
+    <label for="name" class="form__label">name</label>
+</div>
+
+<div class="form__group field">
+    <input type="input" class="form__field" placeholder="Name" required="">
+    <label for="name" class="form__label">e-mail</label>
+</div>
+
+<div class="form__group field">
+    <input type="input" class="form__field" placeholder="Name" required="">
+    <label for="name" class="form__label">subject</label>
+</div>
+
+<div class="form__group field">
+    <textarea class="form__field" placeholder="Message" required=""></textarea>
+    <label for="message" class="form__label">message</label>
+    <button class="btn  btn" type="button">submit</button>
+
+        </div>
+    </div>
+</div>
+
 
     
     <footer class="footer">
         <div class="container">
             <div class="footer-section logo-section">
-                <img src="asset/logo_copy.png" class="logo_footer">
+                <img src="logo_copy.png" class="logo_footer">
                 <p>Small and Elegant, Bringing Joy.</p>
             </div>
             <div class="footer-section information">
@@ -498,15 +655,17 @@
         </div>
         <div class="footer-bottom">
             <div class="social-icons">
-                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href=""><i class="bi bi-facebook"></i></a>
                 <a href="#"><i class="bi bi-instagram"></i></a>
             </div>
-            <p>Copyright &copy; 2024 SweetSlice. All rights reserved.</p>
-            <div class="payment-methods">
+            <p style="font-size: 14px;">Copyright &copy; 2024 SweetSlice. All rights reserved.</p>
+
+            <div class="payment-methods" style="font-size: 14px; margin-left:5px;">
                 <p>cash on delivery</p>
             </div>
         </div>
     </footer>
+    <br>
     
 @else
     <h1>kmu belum login,ayok login duluu

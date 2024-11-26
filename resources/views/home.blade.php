@@ -615,6 +615,18 @@
             transform: scale(0.9);
         }
 
+        /*  tampilan PC */
+.textsaran {
+    margin-left: 200px;
+}
+
+/*  tampilan HP */
+@media screen and (max-width: 768px) {
+    .textsaran {
+        margin-left: 5px;
+    }
+}
+
         /* alert saran */
         .cookie-card {
             max-width: 320px;
@@ -819,12 +831,13 @@
             <div>
                 <img class="img" src="logo.png" alt="">
             </div>
-            <div class="navbartengah">
+          <div class="navbartengah">
                 <div class="nav-links"><b><a href="#">Home</a></b></div>
                 <div class="nav-links"><b><a href="/location">location</a></b></div>
-                <div class="nav-links"><b><a href="#">categories</a></b></div>
-                <div class="nav-links"><b><a href="/aboutus">about us</a></b></div>
+                <div class="nav-links"><b><a href="#">menu</a></b></div>
+                <div class="nav-links"><b><a href="/aboutus">contact us</a></b></div>
             </div>
+
 
             <label title="cart" for="cart" class="label">
   
@@ -833,12 +846,11 @@
                 <input id="profile" name="page" type="radio" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
                     id="label">
-                    <a href="/account">
-                         <path fill="inherit"  
-                        d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
-                    </path>
-                    </a>
-                   
+                     <a href="/account">
+                            <path fill="inherit"
+                                d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
+                            </path>
+                        </a>
                 </svg>
             </label>
         </nav>
@@ -856,24 +868,28 @@
                 <input id="home" name="page" type="radio" checked="" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" height="20" width="21" class="icon home"
                     id="label">
+                    <a href="/home">
                     <path fill="inherit"
                         d="M18.9999 6.01002L12.4499 0.770018C11.1699 -0.249982 9.16988 -0.259982 7.89988 0.760018L1.34988 6.01002C0.409885 6.76002 -0.160115 8.26002 0.0398848 9.44002L1.29988 16.98C1.58988 18.67 3.15988 20 4.86988 20H15.4699C17.1599 20 18.7599 18.64 19.0499 16.97L20.3099 9.43002C20.4899 8.26002 19.9199 6.76002 18.9999 6.01002ZM10.9199 16C10.9199 16.41 10.5799 16.75 10.1699 16.75C9.75988 16.75 9.41988 16.41 9.41988 16V13C9.41988 12.59 9.75988 12.25 10.1699 12.25C10.5799 12.25 10.9199 12.59 10.9199 13V16Z">
                     </path>
+                    </a>
                 </svg>
             </label>
             <label title="cart" for="cart" class="label">
-                <input id="cart" name="page" type="radio" />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18">
-                    <i fill="inherit" class="bi bi-geo-alt-fill" id="maps"></i>
-                </svg>
+                
+                   <a  href="/location" class="icon-link" >
+                     <i style="margin-left : 60px;" class="bi bi-geo-alt-fill" id="maps"></i>
+                   </a>
+
             </label>
             <label title="profile" for="profile" class="label">
                 <input id="profile" name="page" type="radio" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
                     id="label">
-                    <path fill="inherit"
+                    <a href="/account"> <path fill="inherit"
                         d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
-                    </path>
+                    </path></a>
+                   
                 </svg>
             </label>
         </section>
@@ -935,8 +951,9 @@
                             <div class="content">
                                 <img src="bento.png" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
+                                    @crsf
                                     <p class="title">
-                                        <strong style="color:#504646">diy cake</strong>
+                                        <strong style="color:#504646">{{Product::product->nama_product }}</strong>
                                     </p>
                                     <p class="info">
                                         Size: 10cm
@@ -953,7 +970,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="bento.jpeg" alt="" class="imgcake" id="imgdiy">
+                               <img src="bento.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">bento cake</strong>
@@ -972,7 +989,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="uglycake.jpeg" alt="" class="imgcake" id="imgdiy">
+                                   <img src="uglycake.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">ugly cake</strong>
@@ -991,7 +1008,7 @@
                     <div class="col">
                         <div class="card">
                             <div class="content">
-                                <img src="valentine.jpeg" alt="" class="imgcake" id="imgdiy">
+                                 <img src="valentine.jpeg" alt="" class="imgcake" id="imgdiy">
                                 <div class="description">
                                     <p class="title">
                                         <strong style="color:#504646">valentine edition</strong>
@@ -1023,7 +1040,7 @@
 
                     </div>
                     <div class="col">
-                        <div class="loader"></div>
+                       <a href="/location"><div class="loader"></div></a> 
                     </div>
                 </div>
             </div>
@@ -1031,22 +1048,27 @@
 
         <div class="saran">
 
-            <div class="box" style="background-color:#b6aaae; color:#FFFFFF">
-                <div>
+            <div class="box" style="background-color:#b6aaae; color:#FFFFFF;" >
+                
+            <!-- tampilan pc -->
                     <div class="container">
-                        <img  class="img-fluid imgsaran"  src="ide.png" alt=""  style="width: 100px; height: 100px;">
-                        <div class="textsaran" style="margin-left:20px;">
-                            <h6 style="margin-top:5px">
+                       <center>
+                        <div class="textsaran" >
+                            <h6 style="margin-top:20px">
                                 punya saran buat toko kami?
                             </h6>
-                            <h2 style="margin-top: -12px; margin-bottom: -200px; font-weight: bold;">
-                                kirim saran kalian lewat <br> e-mail
+                            <h2 style="margin-top: -12px; font-weight: bold;">
+                                kirim saran kalian lewat e-mail
                             </h2>
                         </div>
-                    </div>
+                        </center>
+                    </div >
+                    
+
+
                     <br>
-                    <center>
-                        <div class="input-wrapper">
+                            <center>
+                        <div class="input-wrapper" style="margin-left : 10px; margin-top: -10px">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                                 <g data-name="Layer 2">
                                     <g data-name="inbox">
@@ -1057,7 +1079,7 @@
                                     </g>
                                 </g>
                             </svg>
-                            <input type="text" name="text" class="input" placeholder="ketik saran disini" />
+                            <input  type="text" name="text" class="input" placeholder="ketik saran disini" />
                             <button class="Subscribe-btn" onclick="showCookieNotice()">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 38 15"
                                     class="arrow">
@@ -1069,29 +1091,24 @@
                             </button>
                     </center>
                 </div>
+                
 
                 <!-- Cookie Notice -->
                 <div class="cookie-card" id="cookieNotice" style="display: none;">
                     <span class="title">🍰 Hai sahabat Sweeties</span>
-                    <p class="description">Email Anda berhasil terkirim! Terima kasih telah menghubungi kami. Kami akan
+                    <p class="description">saran Anda berhasil terkirim! Terima kasih telah menghubungi kami. Kami akan
                         segera merespons pesan Anda.
 
                     <div class="actions">
-                        <button class="pref" onclick="closeCookieNotice()">kembali ke home</button>
+                        <button class="pref" onclick="closeCookieNotice()" style = "text-decoration : none;">kembali ke home</button>
                         <button class="accept" onclick="closeCookieNotice()">oke</button>
                     </div>
                 </div>
 
-            </div>
-        </div>
+          
     </div>
     </div>
-    </div>
-
-    </div>
-
-    </div>
-    </div>
+   
 
     <footer class="footer">
         <div class="container">
@@ -1103,8 +1120,8 @@
                 <h3>Information</h3>
                 <ul>
                     <li><a href="/home" style="text-decoration:none;">home</a></li>
-                    <li><a href="/aboutus" style="text-decoration:none;">about us</a></li>
-                    <li><a href="#" style="text-decoration:none;">categories</a></a></li>
+                    <li><a href="/aboutus" style="text-decoration:none;">contact us</a></li>
+                    <li><a href="/categories" style="text-decoration:none;">menu</a></a></li>
                     <li><a href="/location" style="text-decoration:none;">location</a></li>
                 </ul>
             </div>

@@ -51,20 +51,7 @@ class ProductController extends Controller
     }
 
  
-            public function update(Request $request, $id)
-            {
-                $product = Product::find($id);
-                $product->name = $request->input('name');
-                $product->price = $request->input('price');
-                $product->save();
-
-                return redirect()->route('/admin/product')->with('success', 'Produk berhasil diperbarui');
-            }
-                public function edit($id)
-{
-    $product = Product::find($id);
-    return view('product.edit', compact('product'));
-}
+           
 
 
 
@@ -73,28 +60,38 @@ class ProductController extends Controller
      */
   
 
-public function show($id)
-{
-    // Mencari data berdasarkan id
-    // $post = Post::findOrFail($id);
 
-    // // Mengirim $post ke view
-    // return view('posts.show', compact('post'));
-}
+   
+
 
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+     public function edit($id)
+{
+    $product = Product::findOrFail($id); // Cari data berdasarkan ID
+    return view('products.edit', compact('product')); // Kirim data ke view
+}
+
 
     /**
      * Update the specified resource in storage.
      */
-   
+ public function update(Request $request, $id)
+{
+    $product = Product::findOrFail($id); // Cari data berdasarkan ID
+
+    // Pastikan mengacu ke nama kolom yang benar
+    $product->nama_product = $request->nama_product; 
+    $product->harga = $request->harga;
+    $product->deskripsi = $request->deskripsi;
+    $product->save(); // Simpan perubahan ke database
+
+    return redirect('/admin/product')->with('success', 'Produk berhasil diupdate!');
+}
+
+
    
 
     /**
