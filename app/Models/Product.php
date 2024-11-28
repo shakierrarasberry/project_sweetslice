@@ -13,7 +13,7 @@ class Products extends Model
 }
 
 $products = new products ();
-$products->nama_product = "bentocakw";
+$products->nama_product = "bentocake";
 $products->id_kategori = 1;
 $products->deskripsi = "product1";
 $products->harga = 10000;

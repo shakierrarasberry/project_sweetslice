@@ -953,7 +953,7 @@
                                 <div class="description">
                                     @crsf
                                     <p class="title">
-                                        <strong style="color:#504646">{{$products->nama_product }}</strong>
+                                        <strong style="color:#504646"> bentocake</strong>
                                     </p>
                                     <p class="info">
                                         Size: 10cm

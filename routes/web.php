@@ -48,7 +48,6 @@ Route::middleware([AdminMiddleware::class])->group(function () {
     Route::get('/products/edit/{id}', [ProductController::class, 'edit']);
     Route::post('/products/update/{id}', [ProductController::class, 'update']);
 
-    Route::get('/home', [ProductController::class, 'showProducts']);
-
+    
 
 });
