@@ -12,6 +12,14 @@ use Illuminate\Routing\Controller;
 class ProductController extends Controller
 {
     
+        public function showProducts(){
+            $product = product::all(); //ngambilproduct
+
+            return view('home', compact('products')); //kirim data ke home
+
+        }
+
+
     public function index()
     {
         return view("tambah_product");
