@@ -13,7 +13,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-  <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+  <title>contactus</title>
 </head>
 <style>
              body {
@@ -136,6 +142,10 @@
             fill: #504646;
             /* Warna berubah saat di-hover */
         }
+
+
+
+        
 
         #maps {
             transition: all 200ms;
@@ -391,6 +401,18 @@ textarea.form__field {
             }
         }
         
+
+  @media (max-width: 576px) {
+    .card {
+      width: 185px !important; /* Ukuran lebih kecil untuk tampilan HP */
+    }
+  }
+
+
+
+
+
+
         
                 .footer {
             background-color: #f3ebea;
@@ -479,71 +501,89 @@ textarea.form__field {
 </style>
 <body>
      @if (Auth::check())
-    <div id="content">
+   <div id="content">
         <nav id="navbar-top" class="hidden">
             <div>
-                <img class="img" src="asset/logo.png" alt="">
+                <img class="img" src="logo.png" alt="">
             </div>
-            <div class="navbartengah">
+          <div class="navbartengah">
                 <div class="nav-links"><b><a href="/home">Home</a></b></div>
-                <div class="nav-links"><b><a href="location">location</a></b></div>
-                <div class="nav-links"><b><a href="#">categories</a></b></div>
-                <div class="nav-links"><b><a href="#">about us</a></b></div>
+                <div class="nav-links"><b><a href="/location">location</a></b></div>
+                <div class="nav-links"><b><a href="#">menu</a></b></div>
+                <div class="nav-links"><b><a href="/aboutus">contact us</a></b></div>
             </div>
 
 
-           
+            <label title="cart" for="cart" class="label">
+  
 
+            <label title="profile" for="profile" class="label">
+                <input id="profile" name="page" type="radio" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
+                    id="label">
+                     <a href="/account">
+                            <path fill="inherit"
+                                d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
+                            </path>
+                        </a>
+                </svg>
+            </label>
         </nav>
 
         <div class="navkhususmobile">
-            <img style="margin-top:-20px;" class="imgmobile" src="logo.png" alt="">
+            <img style="margin-top:-20px;" class="imgmobile" src="logo_copy.png" alt="">
 
         </div>
 
         <!-- Navbar Bawah (Mobile) -->
 
         <section id="navbar-bottom">
+           
             <label title="home" for="home" class="label">
                 <input id="home" name="page" type="radio" checked="" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" height="20" width="21" class="icon home"
                     id="label">
+                    <a href="/home">
                     <path fill="inherit"
                         d="M18.9999 6.01002L12.4499 0.770018C11.1699 -0.249982 9.16988 -0.259982 7.89988 0.760018L1.34988 6.01002C0.409885 6.76002 -0.160115 8.26002 0.0398848 9.44002L1.29988 16.98C1.58988 18.67 3.15988 20 4.86988 20H15.4699C17.1599 20 18.7599 18.64 19.0499 16.97L20.3099 9.43002C20.4899 8.26002 19.9199 6.76002 18.9999 6.01002ZM10.9199 16C10.9199 16.41 10.5799 16.75 10.1699 16.75C9.75988 16.75 9.41988 16.41 9.41988 16V13C9.41988 12.59 9.75988 12.25 10.1699 12.25C10.5799 12.25 10.9199 12.59 10.9199 13V16Z">
                     </path>
+                    </a>
                 </svg>
             </label>
             <label title="cart" for="cart" class="label">
-                <input id="cart" name="page" type="radio" />
-                <svg xmlns="http://www.w3.org/2000/svg" fill="inherit" viewBox="0 0 18 20" height="20" width="18">
-                    <i fill="inherit" class="bi bi-geo-alt-fill" id="maps"></i>
-                </svg>
+                
+                   <a  href="/location" class="icon-link" >
+                     <i style="margin-left : 60px;" class="bi bi-geo-alt-fill" id="maps"></i>
+                   </a>
+
             </label>
             <label title="profile" for="profile" class="label">
                 <input id="profile" name="page" type="radio" />
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 20" height="20" width="18" class="icon profile"
                     id="label">
-                    <path fill="inherit"
+                    <a href="/account"> <path fill="inherit"
                         d="M9.14365 12.4805C4.51168 12.4805 0.782227 13.5748 0.782227 16.354C0.782227 19.1332 4.49365 20.2446 9.14365 20.2446C13.7756 20.2446 17.5051 19.1504 17.5051 16.3712C17.5051 13.592 13.7936 12.4805 9.14365 12.4805ZM9.14365 0.00641026C6.62518 0.00641026 4.59702 2.09744 4.59702 4.72051C4.59702 7.34359 6.62518 9.42564 9.14365 9.42564C11.6528 9.42564 13.6903 7.33461 13.6903 4.71154C13.6903 2.08846 11.6528 0.00641026 9.14365 0.00641026ZM9.14365 7.29359C7.69316 7.29359 6.51634 6.07282 6.51634 4.5959C6.51634 3.11897 7.69316 1.89821 9.14365 1.89821C10.5941 1.89821 11.7619 3.11897 11.7619 4.5959C11.7619 6.07282 10.5941 7.29359 9.14365 7.29359Z">
-                    </path>
+                    </path></a>
+                   
                 </svg>
             </label>
         </section>
-    </div> 
-    
+    </div>
+
     <div style="width:100%; height:200px; background-color:red;">
       
     </div>
     
     
     
-    
-          <div class="container mt-4">
+        
+          <div class="container mt-4"style = "display: flex; justify-content: center; font-weight: bold;">
+           <center> 
         <div class="row">
             <!-- Card 1 -->
             <div class="col-6 col-lg-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card" style ="width : 250px">
+                    <div class="card-body"   style = " color:#a69890;">
                       <i class="bi bi-telephone"></i>
                         <h5 class="card-title">phone</h5>
                         <p class="card-text">+62 895-0374-3099</p>
@@ -552,8 +592,8 @@ textarea.form__field {
             </div>
             <!-- Card 2 -->
             <div class="col-6 col-lg-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card"  style ="width : 250px">
+                    <div class="card-body"   style = " color:#a69890;">
                       <i class="bi bi-whatsapp"></i>
                         <h5 class="card-title">whatsapp</h5>
                         <p class="card-text">+62 895-0374-3099</p>
@@ -562,18 +602,18 @@ textarea.form__field {
             </div>
             <!-- Card 3 -->
             <div class="col-6 col-lg-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card"  style ="width : 250px">
+                    <div class="card-body"   style = " color:#a69890;">
                       <i class="bi bi-envelope"></i>
                         <h5 class="card-title">e-mail</h5>
-                        <p class="card-text">_sweetslice@gmail.com</p>
+                        <p class="card-text">sweetslice@gmail.com</p>
                     </div>
                 </div>
             </div>
             <!-- Card 4 -->
             <div class="col-6 col-lg-3 mb-4">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card"  style ="width : 250px">
+                    <div class="card-body"   style = " color:#a69890;">
                       <i class="bi bi-shop-window"></i>
                         <h5 class="card-title">online store</h5>
                         <p class="card-text">www.sweetslice.co.id</p>
@@ -581,30 +621,30 @@ textarea.form__field {
                 </div>
             </div>
             </div>
+            </center>
+    
             </div>
 
-    
     <div class="container my-5">
     <div class="row">
 
         <!-- Map Section -->
         <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                <h1>kalian masi bingung lokasi kita dmn?</h1>
-      <p>klik maps di bawah ini untuk info lebih lengkap</p>
+                <h1 style = "font-weight: bold; color:#a69890">kalian masi bingung lokasi kita dmn?</h1>
+      <p style = "color:#a69890">klik maps di bawah ini untuk info lebih lengkap</p>
             <iframe class="map w-100"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.2673843540595!2d107.46687296950851!3d-6.385027066813991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69726e02556809%3A0x9306772fbad89c65!2sJl.%20Opal%20Timur%205%2C%20Cikampek%20Utara%2C%20Kec.%20Kota%20Baru%2C%20Karawang%2C%20Jawa%20Barat%2041374!5e0!3m2!1sid!2sid!4v1728971260672!5m2!1sid!2sid"
                 height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
         <!-- Form Section -->
-        <div class="col-12 col-lg-6">
-  <div class="form">
+        <div class="col-12 col-lg-6" >
+  <div class="form"style = "margin-left : 40px;">
    <h1 style="font-weight: bold; color:#a69890">
-     Get in toch
+     Hubungi Kami
    </h1>
-   <p style="font-weight: bold; color:#a69890">
-     ghfyhgfg hbfyh
-     hhty
+   <p style="color:#a69890">
+     melalui form di bawah ini 
    </p>
 <div class="form__group field">
     <input type="input" class="form__field" placeholder="Name" required="">
@@ -624,7 +664,7 @@ textarea.form__field {
 <div class="form__group field">
     <textarea class="form__field" placeholder="Message" required=""></textarea>
     <label for="message" class="form__label">message</label>
-    <button class="btn  btn" type="button">submit</button>
+    <button class="btn" type="button" style = "background-color : red">submit</button>
 
         </div>
     </div>
@@ -641,10 +681,10 @@ textarea.form__field {
             <div class="footer-section information">
                 <h3>Information</h3>
                 <ul>
-                    <li><a href="#" style="text-decoration:none;">home</a></li>
-                    <li><a href="#" style="text-decoration:none;">about us</a></li>
+                    <li><a href="/home" style="text-decoration:none;">home</a></li>
+                    <li><a href="/aboutus" style="text-decoration:none;">contactus</a></li>
                     <li><a href="#" style="text-decoration:none;">categories</a></a></li>
-                    <li><a href="#" style="text-decoration:none;">location</a></li>
+                    <li><a href="/location" style="text-decoration:none;">location</a></li>
                 </ul>
             </div>
             <div class="footer-section address">
