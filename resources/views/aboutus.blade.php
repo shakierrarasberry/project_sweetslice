@@ -404,13 +404,19 @@ textarea.form__field {
 
   @media (max-width: 576px) {
     .card {
-      width: 185px !important; /* Ukuran lebih kecil untuk tampilan HP */
+      width: 150px !important; /* Ukuran lebih kecil untuk tampilan HP */
     }
   }
 
 
+  @media (min-width: 576px) {
+    .img{
+      margin-top:50px !important;
+    }
+  }
 
 
+  
 
 
         
@@ -500,7 +506,7 @@ textarea.form__field {
         }
 </style>
 <body>
-     @if (Auth::check())
+
    <div id="content">
         <nav id="navbar-top" class="hidden">
             <div>
@@ -530,10 +536,7 @@ textarea.form__field {
             </label>
         </nav>
 
-        <div class="navkhususmobile">
-            <img style="margin-top:-20px;" class="imgmobile" src="logo_copy.png" alt="">
 
-        </div>
 
         <!-- Navbar Bawah (Mobile) -->
 
@@ -553,7 +556,7 @@ textarea.form__field {
             <label title="cart" for="cart" class="label">
                 
                    <a  href="/location" class="icon-link" >
-                     <i style="margin-left : 60px;" class="bi bi-geo-alt-fill" id="maps"></i>
+                     <i style="margin-left : 20px;" class="bi bi-geo-alt-fill" id="maps"></i>
                    </a>
 
             </label>
@@ -570,12 +573,12 @@ textarea.form__field {
         </section>
     </div>
 
-    <div style="width:100%; height:200px; background-color:red;">
-      
+    <div style="margin-top:45px;">
+      <img class="img-fluid img" src="contact us.png" style="width:95%; object-fit:cover">
     </div>
     
     
-    
+    <h1 style="margin-top:40px; margin-left:5px; margin-right:5px;  text-align:center; color:#a69890"> Hubungi kita melalui kontak di bawah ini</h1>
         
           <div class="container mt-4"style = "display: flex; justify-content: center; font-weight: bold;">
            <center> 
@@ -664,7 +667,7 @@ textarea.form__field {
 <div class="form__group field">
     <textarea class="form__field" placeholder="Message" required=""></textarea>
     <label for="message" class="form__label">message</label>
-    <button class="btn" type="button" style = "background-color : red">submit</button>
+    <button class="btn" type="button" style = "background-color : #a69890; color:#fff">submit</button>
 
         </div>
     </div>
@@ -707,12 +710,5 @@ textarea.form__field {
     </footer>
     <br>
     
-@else
-    <h1>kmu belum login,ayok login duluu
-        <p>ke halaman login
-            <a href="/auth">klik di sini untuk ke halaman login</a>
-        </p>
-    </h1>
-@endif
 </body>
 </html>

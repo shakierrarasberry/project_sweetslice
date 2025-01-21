@@ -18,7 +18,7 @@
 
 html, body {
 	min-height: 100vh;
-	display: flex;
+
 	align-items: center;
 	justify-content: center;
 }
@@ -73,9 +73,9 @@ a {
 
 button {
 	border-radius: 20px;
-	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
-	color: #FFFFFF;
+	border: 1px solid #a69890;
+	background-color: #a69890;
+	color: #fff;
 	font-size: 12px;
 	font-weight: bold;
 	padding: 12px 45px;
@@ -187,9 +187,9 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
-	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
-	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background: #a69890;
+	background: -webkit-linear-gradient(to right, #D6ADAD, #a69890);
+	background: linear-gradient(to right, #D6ADAD, #a69890);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -238,57 +238,23 @@ input {
 	transform: translateX(20%);
 }
 
-.social-container {
-	margin: 20px 0;
-}
 
-.social-container a {
-	border: 1px solid #DDDDDD;
-	border-radius: 50%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0 5px;
-	height: 40px;
-	width: 40px;
-}
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
 
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
 
 /* Tampilan Mobile */
 .mobile-login {
-	background-color: #E1E8EE;
+	background-color: #222;
+	border-radius: 15px;
+	height: 550px;
+	width: 350px;
 	display: none;
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-	width: 100%;
-	height: 100vh;
 	overflow: hidden;
+	
 }
 
 .mobile-login .form-structor {
+  
 	background-color: #222;
 	border-radius: 15px;
 	height: 550px;
@@ -304,6 +270,9 @@ footer a {
 	}
 	.mobile-login {
 		display: flex;
+		margin-left: 6px;
+		margin-top: 50px;
+		
 	}
 }
   </style>
@@ -312,15 +281,13 @@ footer a {
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
 
 html,body {
+	color: #a69890;
 	position: relative;
 	min-height: 100vh;
-	background-color: #E1E8EE;
-	display: flex;
+	background-color: #f3ebea;
 	align-items: center;
 	justify-content: center;
-	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	font-family: 'Poppins';
 }
 
 .form-structor {
@@ -328,6 +295,7 @@ html,body {
 	border-radius: 15px;
 	height: 550px;
 	width: 350px;
+	
 	position: relative;
 	overflow: hidden;
 	
@@ -339,7 +307,7 @@ html,body {
 		background-repeat: no-repeat;
 		background-position: left bottom;
 		background-size: 500px;
-		background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf884ad570b50659c5fa2dc2cfb20ecf&auto=format&fit=crop&w=1000&q=100');
+		background-image: url('mobile.jpeg');
 	}
 	
 	.signup {
@@ -382,7 +350,7 @@ html,body {
 			text-align: center;
 			
 			span {
-				color: rgba(0,0,0,0.4);
+				color: #fff;
 				opacity: 0;
 				visibility: hidden;
 				-webkit-transition: all .3s ease;
@@ -391,10 +359,10 @@ html,body {
 		
 		.form-holder {
 			border-radius: 15px;
-			background-color: #fff;
+			background-color: #f3ebea;
 			overflow: hidden;
-			margin-top: 50px;
-			opacity: 1;
+			margin-top: 15px;
+			opacity: 0.90;
 			visibility: visible;
 			-webkit-transition: all .3s ease;
 			
@@ -420,7 +388,7 @@ html,body {
 		}
 		
 		.submit-btn {
-			background-color: rgba(0,0,0,0.4);
+			background-color: #a69890;
 			color: rgba(256,256,256,0.7);
 			border:0;
 			border-radius: 15px;
@@ -476,12 +444,12 @@ html,body {
 			-webkit-transition: all .3s ease;
 			
 			.form-title {
-				color: #000;
+				color: #a69890;
 				font-size: 1.7em;
-				text-align: center;
+				text-align: center
 
 				span {
-					color: rgba(0,0,0,0.4);
+										color: #a69890;
 					opacity: 0;
 			    visibility: hidden;
 				  -webkit-transition: all .3s ease;
@@ -520,7 +488,7 @@ html,body {
 			}
 
 			.submit-btn {
-				background-color: #6B92A4;
+				background-color: #a69890;
 				color: rgba(256,256,256,0.7);
 				border:0;
 				border-radius: 15px;
@@ -618,6 +586,7 @@ html,body {
 				<h1>Hello, Friend!</h1>
 				<p>Enter your personal details and start journey with us</p>
 				<button class="ghost" id="signUp">Sign Up</button>
+
 			</div>
 		</div>
 	</div>
@@ -631,11 +600,18 @@ html,body {
   
 
   <!-- Tampilan Mobile -->
+     <div class="navkhususmobile" style = "display: flex; justify-content:space-between; margin-right :10px; margin-left:10px;">
+            <img style="margin-top:17px" class="imgmobile" src="logo_copy.png" alt="logo">
+             
+             <a href="/home"><h5>masuk tanpa login</h5></a>
+        </div>
+    
   <div class="mobile-login">
+       
 
-  <div class="form-structor">
+  <div class="form-structor" style="">
 	<div class="signup">
-		<h2 class="form-title" id="signup"><span>or</span>Sign up</h2>
+		<h2 class="form-title" id="signup"><span> or</span>Sign up</h2>
 		<div class="form-holder">
 			 <form action="{{ url('prosesregister') }}" method="post">
               @csrf
@@ -652,7 +628,7 @@ html,body {
 
 	<div class="login slide-up">
 		<div class="center">
-			<h2 class="form-title" id="login"><span>or</span>Log in</h2>
+			<h2 class="form-title" id="login"><span> or </span>Log in</h2>
 			<div class="form-holder">
 				 <form action="{{ url('proseslogin') }}" method="post">
            @csrf
