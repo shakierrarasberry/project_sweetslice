@@ -36,6 +36,15 @@ Route::get('/aboutus', function(){
 });
 
 
+
+Route::get('/tambah_product', function(){
+    return view('tambah_product');
+});
+Route::get('/daftarmenu', function(){
+    return view('daftarmenu');
+});
+
+
 Route::get('/admin/users', [UserController::class, 'tampil'])->name('users.tampil');
 
 

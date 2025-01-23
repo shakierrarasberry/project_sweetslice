@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Model\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
-       use App\Models\Post;
+use App\Models\Post;
 
 
 class ProductController extends Controller
@@ -46,8 +46,7 @@ class ProductController extends Controller
         ]);
     }
 
-             public function tampilkanData()
-    {
+             public function tampilkanData(){
         $ngambilproduct = Product::all(); // Mengambil semua data produk
     return view('tambah_product', ['products' => $ngambilproduct]);
     }
