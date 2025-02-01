@@ -53,7 +53,7 @@ body{
 }
 </style>
 <body >
-  <a href="/daftarmenu"style="text-decoration : none; color:#a69890; ">
+  <a href="/menu"style="text-decoration : none; color:#a69890; ">
   <p class="kehalamanmenu" style="text-align:end; font-size:12px"> kehalaman daftar menu 
   <i class="bi bi-arrow-right-short"></i>
   </p>

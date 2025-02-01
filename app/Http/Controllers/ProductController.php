@@ -48,7 +48,7 @@ class ProductController extends Controller
 
              public function tampilkanData(){
         $ngambilproduct = Products::all(); // Mengambil semua data produk
-    return view('tambah_product', ['products' => $ngambilproduct]);
+    return view('menu', ['products' => $ngambilproduct]);
     }
 
  
@@ -71,7 +71,7 @@ class ProductController extends Controller
      */
      public function edit($id)
 {
-    $product = Product::findOrFail($id); // Cari data berdasarkan ID
+    $product = Products::findOrFail($id); // Cari data berdasarkan ID
     return view('products.edit', compact('product')); // Kirim data ke view
 }
 
@@ -81,7 +81,7 @@ class ProductController extends Controller
      */
  public function update(Request $request, $id)
 {
-    $product = Product::findOrFail($id); // Cari data berdasarkan ID
+    $product = Products::findOrFail($id); // Cari data berdasarkan ID
 
     // Pastikan mengacu ke nama kolom yang benar
     $product->nama_product = $request->nama_product; 
@@ -102,7 +102,7 @@ class ProductController extends Controller
 public function destroy($id)
 {
     // Cari data berdasarkan ID
-    $product = Product::find($id);
+    $product = Products::find($id);
 
     // Cek apakah data ditemukan
     if ($product) { 

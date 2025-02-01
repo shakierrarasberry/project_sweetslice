@@ -40,9 +40,11 @@ Route::get('/aboutus', function(){
 Route::get('/tambah_product', function(){
     return view('tambah_product');
 });
-Route::get('/daftarmenu', function(){
-    return view('daftarmenu');
-});
+
+Route::get('/menu', [ProductController::class, 'tampilkanData']);
+
+
+
 Route::get('/bantuan', function(){
     return view('bantuan');
 });
