@@ -76,10 +76,10 @@
             Back to 
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="tambahprodu.html">Tambah Product</a></li>
-            <li><a class="dropdown-item" href="editcss.html">Edit Product</a></li>
+            <li><a class="dropdown-item" href="/tambah_product">Tambah Product</a></li>
+            <li><a class="dropdown-item" href="/admin/product">Edit Product</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="Account.html">Account</a></li>
+            <li><a class="dropdown-item" href="/account">Account</a></li>
           </ul>
       </li>    
   
