@@ -509,9 +509,7 @@ textarea.form__field {
 
    <div id="content">
         <nav id="navbar-top" class="hidden">
-            <div>
-                <img class="img" src="logo.png" alt="">
-            </div>
+           
           <div class="navbartengah">
                 <div class="nav-links"><b><a href="/home">Home</a></b></div>
                 <div class="nav-links"><b><a href="/location">location</a></b></div>
@@ -574,7 +572,7 @@ textarea.form__field {
     </div>
 
     <div style="margin-top:45px;">
-      <img class="img-fluid img" src="contact us.png" style="width:95%; object-fit:cover">
+      <img class="img-fluid img" src="contactus.png" style="width:95%; object-fit:cover">
     </div>
     
     

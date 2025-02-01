@@ -43,6 +43,9 @@ Route::get('/tambah_product', function(){
 Route::get('/daftarmenu', function(){
     return view('daftarmenu');
 });
+Route::get('/bantuan', function(){
+    return view('bantuan');
+});
 
 
 Route::get('/admin/users', [UserController::class, 'tampil'])->name('users.tampil');

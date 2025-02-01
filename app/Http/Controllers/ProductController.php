@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Model\Product;
+use App\Models\Products;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -38,7 +38,7 @@ class ProductController extends Controller
         $deskripsi = $request->input("deskripsi");
 
         // Masukan data ke table
-        Product::create([
+        Products::create([
             "nama_product" => $nama_product,
             "harga" => $harga,
             "deskripsi" => $deskripsi,
@@ -47,7 +47,7 @@ class ProductController extends Controller
     }
 
              public function tampilkanData(){
-        $ngambilproduct = Product::all(); // Mengambil semua data produk
+        $ngambilproduct = Products::all(); // Mengambil semua data produk
     return view('tambah_product', ['products' => $ngambilproduct]);
     }
 

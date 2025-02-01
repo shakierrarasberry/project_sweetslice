@@ -249,7 +249,7 @@
   <div class="bantuan" style="margin-top:2px;">
           <h3 style="margin-left:25px; color:#504646">Bantuan</h3>
           
-  <a href="bantuan.html" style="text-decoration : none; color: #7c7275">   
+  <a href="/bantuan" style="text-decoration : none; color: #7c7275">   
     <div class="pusatbantuan" style="display:flex; margin-left:15px">
       <i class="bi bi-question-circle" style="margin-right:5px"></i>
       <p>pusat bantuan</p>

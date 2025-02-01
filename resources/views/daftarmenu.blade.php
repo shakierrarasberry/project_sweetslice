@@ -100,7 +100,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($products as $product)
+          @foreach($products as $products)
           <tr>
             <td>
               {{ $product->nama_product }}
